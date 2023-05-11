@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <title>GOLF</title>
+  </head>
+
+  <!-- /* ページ1の画面 = オープニング-->
+  <body>
+    <div id="index.html">
+      <p class="part">G O L F</p>
+      <audio src="bgm/opening.mp3" autoplay roop></audio>
+      <video src="img/opening.mp4" autoplay muted id="bg-video"></video>
+      <body background="img/opening.mp4"></body>
+
+      <!-- /*ゲームボタン -->
+
+      <div id="btn1">
+        <div class="btn_CSS">P L A Y</div>
+
+        <!-- /* ボタン(btn)をクリックすると次のページへ遷移 -->
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+          $("#btn1").click(function () {
+            window.location.href = "P2.html";
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

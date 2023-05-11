@@ -1,0 +1,241 @@
+.part {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 8em;
+  font-weight: bold;
+  font-family: Arial Black;
+  text-shadow: 2px 2px 2px rgb(61, 255, 158);
+}
+
+video {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+img {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* [Playボタン]、[Shotボタン]が遅れて現れる */
+
+.btn_CSS {
+  position: absolute;
+  top: 85%;
+  left: 42%;
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px 60px;
+  background-color: #19d608;
+  box-shadow: 0px 5px #ffffff;
+  border-radius: 14px;
+  font-family: Arial Black;
+  color: #fdfdfd;
+  font-size: 20px;
+}
+
+/* [NEXTボタン]が遅れて現れる */
+
+.btn2_CSS {
+  position: absolute;
+  top: 85%;
+  right: 0%;
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px 60px;
+  background-color: #d34c9b;
+  box-shadow: 0px 5px #ffffff;
+  border-radius: 14px;
+  font-family: Arial Black;
+  color: #fdfdfd;
+  font-size: 20px;
+}
+
+.box {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  width: 220px;
+  height: 100px;
+  background-color: rgb(15, 106, 224);
+  color: white;
+  border-radius: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.boxlive {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  width: 60px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 60px;
+  background-color: rgb(252, 68, 68);
+  color: white;
+  border-radius: 40px;
+  padding-left: 0px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 「ティーショット、セカンドショット」の文字が、左からフワッと現れ、フワッと消える */
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.element {
+  animation: fadeRight 1s ease-in-out forwards,
+    fadeOut 1s ease-in-out forwards 3s;
+}
+
+/* [NEXTボタン]が遅れて現れる */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade_in {
+  animation: fadeIn 1s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/* バーディーの結果 */
+
+.part_BIRDIE {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: orangered;
+  font-size: 10em;
+  font-weight: bold;
+  font-family: Arial Black;
+  text-shadow: white;
+}
+
+/* 左に回転 */
+
+.rotateLeftZ {
+  animation-name: rotateLeftZAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotateLeftZAnime {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
+
+/* パーの結果 */
+
+.part_PAR {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: greenyellow;
+  font-size: 8em;
+  font-weight: bold;
+  font-family: Arial Black;
+  text-shadow: white;
+}
+
+/* 縦に回転 */
+
+.rotateY {
+  animation-name: rotateYAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotateYAnime {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+/* ボギーの結果 */
+
+.part_BOGEY {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: skyblue;
+  font-size: 8em;
+  font-weight: bold;
+  font-family: Arial Black;
+  text-shadow: white;
+}
+
+/* パタっと下へ動く */
+
+.flipDown {
+  animation-name: flipDownAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes flipDownAnime {
+  from {
+    transform: perspective(2500px) rotateX(100deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: perspective(2500px) rotateX(0);
+    opacity: 1;
+  }
+}

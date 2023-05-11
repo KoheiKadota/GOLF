@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <title>GOLF</title>
+  </head>
+
+  <!-- /* ページ4の画面 = グリーンにオン-->
+  <body>
+    <div id="P4.html">
+      <p class="part element">GREEN ON</p>
+
+      <body background="img/green_on.jpg"></body>
+      <video src="img/green_on.jpg"></video>
+
+      <!-- /*ゲームボタン -->
+
+      <div id="next_btn">
+        <div class="btn2_CSS">N E X T</div>
+
+        <!-- /* ボタン(btn)をクリックすると次のページへ遷移 -->
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+          $("#next_btn").click(function () {
+            window.location.href = "P5_Par.html";
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

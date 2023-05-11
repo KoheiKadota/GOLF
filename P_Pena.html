@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <title>GOLF</title>
+  </head>
+
+  <!-- /* 池に入った画面 = ペナルティエリア-->
+  <body>
+    <div id="P_Pena.html">
+      <p class="part element">ペナルティエリア（池）＋１</p>
+
+      <body background="img/pena.jpg"></body>
+
+      <!-- /*ゲームボタン SHOTとページ遷移の2つ-->
+
+      <div id="next_btn">
+        <div class="btn2_CSS">N E X T</div>
+
+        <!-- /* ボタン(btn)をクリックすると次のページ(グリーン)へ遷移 -->
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+          $("#next_btn").click(function () {
+            window.location.href = "P3_NG.html";
+          });
+
+
+      </script>
+    </div>
+  </body>
+</html>
+
+<!-- <script>
+
+          $("#btn2").click(function () {
+            window.location.href = "page3.html";
+          });
+
+        </script> -->
+
+<!-- /*ページ2の画面始まり = ゲーム
+    <div id="page2" style="display: none">
+      <header>
+        <div class="course"><img src="" alt="" /></div>
+        <h1 class="title fadeUp">1st shot</h1>
+      </header>
+      <ul>
+        <li id="gyoza">餃子</li>
+        <li id="chahan">炒飯</li>
+        <li id="ramen">餃子の王将ラーメン</li>
+      </ul>
+
+      <div class="img_box">
+        <div class="gyoza delay-time01 fadeUp">
+          <img src="img/gyoza.jpg" alt="" />
+        </div>
+
+        <div class="chahan delay-time02 fadeUp">
+          <img src="img/chahan.jpg" alt="" />
+        </div>
+
+        <div class="ramen delay-time04 fadeUp">
+          <img src="img/ohsho_ramen.jpg" alt="" />
+        </div>
+      </div>
+
+      <main>
+        <div id="com_hand"></div>
+        <div id="result">日本を美味しく</div>
+      </main>
+    </div>
+
+
+
+
+    <!- 乱数（フェアウェイ or バンカー） -->
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script> -->
+<!-- //餃子を押した時
+      // $("#gyoza").on("click", function () {
+      //   const min = 0;
+      //   const max = 1;
+      //   const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+      //   // 乱数の指示を出す
+      //   console.log(randomNumber);
+
+      //   if (randomNumber === 0) {
+      //     $("#com_hand").text();
+      //     $("#result").text("現在30分待ちです。");
+      //   }
+
+      //   if (randomNumber === 1) {
+      //     $("#com_hand").text();
+      //     $("#result").img("ご注文承りました👍👍");
+      //   }
+      // }); -->
+
+<!-- // 一定数(9回)のクリックでコンピューターに飽きられる
+
+      let clickCount = 0;
+
+      $(document).on("click", function () {
+        clickCount++;
+        if (clickCount === 9) {
+          $("#result").text("またのお越しをお待ちしております。");
+        } else if (clickCount === 10) {
+          $("#page2").hide();
+          $("#page3").show();
+        }
+      }); -->

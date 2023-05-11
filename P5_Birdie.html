@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <title>GOLF</title>
+  </head>
+
+  <!-- /* ページ5の画面 = カップイン フィニッシュ-->
+  <body>
+    <div id="P5_Birdie.html">
+      <p class="part_BIRDIE rotateLeftZ">BIRDIE</p>
+
+      <body background="img/cupin.jpg"></body>
+      <video src="img/cupin.jpg"></video>
+
+      <!-- /*ゲームボタン -->
+
+      <div id="btn5">
+        <div class="btn_CSS">E N D</div>
+
+        <!-- /* ボタン(btn)をクリックすると次のページへ遷移 -->
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+          $("#btn5").click(function () {
+            window.location.href = "P6.html";
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

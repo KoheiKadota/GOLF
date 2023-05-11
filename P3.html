@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <title>GOLF</title>
+  </head>
+
+  <!-- /* ページ3の画面 = セカンドショット-->
+  <body>
+    <div id="P3.html">
+      <p class="part element">2st shot</p>
+
+      <body background="img/IMG_0647.mp4"></body>
+      <video src="img/IMG_0647.mp4"  id="video"></video>
+
+     <!-- /*ゲームボタン SHOTとページ遷移の2つ-->
+
+      <button id="shot_btn" class="btn_CSS">S H O T</button>
+      <button id="next_btn" class="btn2_CSS fade_in" style="display: none">
+        N E X T
+      </button>
+
+        <!-- ホール数、ヤード、Par4の表記-->
+        <div class="box">
+          <div class="top">18H | 360y</div>
+          <div class="bottom">PAR4</div>
+        </div>
+
+        <!-- LIVEの表記-->
+       <div class="boxlive">LIVE</div>
+
+        <!-- /* ボタン(btn)をクリックすると次のページへ遷移 -->
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <!-- [SHOT]ボタンを押すと、➀videoが再生され、[SHOT]ボタンは消え[次へ]ボタンが現れる-->
+
+      <script>
+        $(document).ready(function () {
+          $("#shot_btn").click(function () {
+            $("#video")[0].play();
+            $(this).hide();
+            $("#next_btn").show();
+          });
+        });
+
+
+        // <!--  [NEXT]ボタンを押すと、グリーンorバンカー-->
+
+       $("#next_btn").on("click", function () {
+         const min = 0;
+         const max = 1;
+         const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+        // <!-- 乱数の指示>
+
+         console.log(randomNumber);
+
+        // <!-- 結果 → グリーンにオン>
+
+         if (randomNumber === 0) {
+            window.location.href = "P4.html";
+         }
+
+         // <!-- バンカーへ入ってしまう>
+
+         if (randomNumber === 1) {
+             window.location.href = "P_Bunker.html";
+         }
+
+  });
+         
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
+

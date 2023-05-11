@@ -2,7 +2,7 @@
 
 ## DEMO
 
-- https://koheikadota.github.io/Osho_junken_Custom/index.html
+- https://koheikadota.github.io/GOLF/index.html
 
 ## 紹介と使い方
 
